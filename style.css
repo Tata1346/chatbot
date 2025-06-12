@@ -1,76 +1,84 @@
 body {
     font-family: sans-serif;
-    background-color: #111;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    text-align: center;
+    background: #eef;
 }
 
-.chat-container {
-    background: #222;
-    padding: 20px;
-    border-radius: 10px;
-    width: 350px;
-}
-
-.chat-box {
-    height: 300px;
-    overflow-y: auto;
-    border: 1px solid #444;
-    padding: 10px;
+.controls {
     margin-bottom: 10px;
-    background: #000;
 }
 
-.input-area {
+.game-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
     display: flex;
+    overflow: hidden;
+    border: 2px solid #333;
 }
 
-input[type="text"] {
+.lane {
     flex: 1;
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    position: relative;
 }
 
-button {
-    margin-left: 5px;
-    padding: 8px 12px;
-    background-color: #0a84ff;
-    border: none;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
+.player {
+    position: absolute;
+    bottom: 10px;
+    width: 80px;
+    height: 40px;
+    background: blue;
+    left: 110px;
+    transition: left 0.2s;
 }
 
-.stop-btn {
-    margin-top: 10px;
+.coin {
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background: gold;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+
+/* เพิ่มใต้ .game-container */
+
+#magnet-status {
+    margin: 10px auto;
+    width: 200px;
+    height: 20px;
+    border: 1px solid #333;
+    background: #ccc;
+    position: relative;
+    display: none;
+}
+
+#magnet-bar {
+    background: red;
+    height: 100%;
     width: 100%;
-    background-color: #ff3b3b;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 6px;
-    cursor: pointer;
+    transition: width 1s linear;
 }
 
-.stop-btn:hover {
-    background-color: #ff5c5c;
+@keyframes spin {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
 }
 
-.play-btn {
-    margin-top: 10px;
-    width: 100%;
-    background-color: #04b530;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.play-btn:hover {
-    background-color: #04b530;
+.shop {
+    display: none;
+    background: #fff;
+    border: 2px solid #333;
+    padding: 15px;
+    width: 200px;
+    margin: 20px auto;
 }

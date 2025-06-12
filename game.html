@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>เกมวิ่งเก็บเหรียญ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>เกมวิ่งเก็บเหรียญ</h1>
+
+    <div id="magnet-status">
+        <div id="magnet-bar"></div>
+    </div>
+
+
+    <div class="controls">
+        <button onclick="startGame()">Start</button>
+        <button onclick="stopGame()">Stop</button>
+        <button onclick="openShop()">ร้านค้า</button>
+    </div>
+
+    <div class="game-container">
+        <div class="lane" id="left-lane"></div>
+        <div class="lane" id="center-lane"></div>
+        <div class="lane" id="right-lane"></div>
+        <div class="player" id="player"></div>
+    </div>
+
+    <p>คะแนน: <span id="score">0</span></p>
+
+    <!-- ร้านค้า -->
+    <div id="shop" class="shop">
+        <h2>ร้านค้า</h2>
+        <p>
+            <strong>แม่เหล็ก:</strong><br>
+            <button onclick="buyMagnet(10, 10)">ซื้อแม่เหล็ก Lv.1 (10 คะแนน / 10 วิ)</button><br>
+            <button onclick="buyMagnet(20, 20)">ซื้อแม่เหล็ก Lv.2 (20 คะแนน / 20 วิ)</button><br>
+            <button onclick="buyMagnet(30, 50)">ซื้อแม่เหล็ก Lv.3 (30 คะแนน / 50 วิ)</button>
+        </p>
+        <button onclick="closeShop()">ปิด</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
