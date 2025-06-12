@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>แชทบอทถามตอบ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="chat-container">
+        <h2>💬 แชทบอทถามตอบ🤖</h2>
+        <div id="chat-box" class="chat-box"></div>
+
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="พิมพ์คำถามของคุณ...">
+            <button onclick="sendMessage()">ส่ง</button>
+        </div>
+
+        <!-- ✅ แท็กเพลง -->
+        <audio id="comfort-audio" src="comfort.mp3" preload="auto" loop></audio>
+
+        <!-- ✅ ปุ่มหยุดเพลง -->
+        <button onclick="stopComfortMusic()" class="stop-btn">⏹ หยุดเพลง</button>
+        <button onclick="playComfortMusic()" class="play-btn">▶️ เล่นเพลง</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
